@@ -27,6 +27,7 @@ let newGame = false;
 function gameOver(){
     c.fillStyle = 'black';
     c.fillRect(0, 0, canvas.width, canvas.height)
+    
 
     c.fillStyle = 'white';
     c.fillText("Game Over", canvas.width / 2 - 50, canvas.height / 2);
@@ -35,6 +36,7 @@ function gameOver(){
     playerScore = 0;
     clearInterval(game);
 }
+
 
 
 function collision(head, arr){
@@ -97,6 +99,7 @@ for(let i = 0; i < snake.length; i++){
     c.fillStyle = (i == 0) ? 'white' : 'brown';
 c.fillRect(snake[i].x, snake[i].y, length, 30)
 }
+
 
 c.fillStyle = 'red';
 c.fillRect(egg.x, egg.y, eggSize, eggSize)
